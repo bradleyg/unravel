@@ -9,16 +9,21 @@ describe("unravel", function () {
   describe('unravel.dir()', function(){
     
     it('should read the contents of the example folder and skip empty directories', function(done){
-      unravel.dir(__dirname)
+      unravel.dir(path.join(__dirname, '../example'))
       
       var files = [
-        '/Users/bradley/Sites/unravel/test/unravel.js'
+        'example.js',
+        'file1.txt',
+        'file2.txt',
+        'file3.txt',
+        'file4.txt'
       ]
       
       var count = files.length
       
       unravel.on('file', function(file){
-        files.indexOf(file).should.not.eql(-1)
+        var filename = file.substring(file.lastIndexOf('/') + 1)
+        files.indexOf(filename).should.not.eql(-1)
         count--
       })
       
