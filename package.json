@@ -1,0 +1,27 @@
+{
+  "name": "unravel",
+  "description": "Streaming recursive directory reading",
+  "keywords": [
+    "readDir",
+    "streaming",
+    "directory",
+    "recursive"
+  ],
+  "version": "0.0.1",
+  "author": "Bradley Griffiths <bradley.griffiths@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bradleyg/unravel.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "main": "./index.js",
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  }
+}
